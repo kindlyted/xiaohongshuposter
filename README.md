@@ -2,7 +2,7 @@
 创建小红书笔记的AI助手
 
 # 演示
-https://ai1.ai4uo.com
+https://ai1.ai4uo.com (auth见代码）
 
 # 功能
 - 1.每天发布一条小红书笔记，主题为“历史上的今天”
