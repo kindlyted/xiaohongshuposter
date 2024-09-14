@@ -22,7 +22,8 @@ https://ai1.ai4uo.com (auth见代码）
 - 2.出于成本原因，演示网址用的是星火大模型，大家可以换成自己喜欢的，如果用国外服务器可以用ChatGPT，有key就能合法使用Chatgpt了，现在没有key了 
 - 3.星火敏感词可多了，往往出人意料
 - 4.git commit都应该写点啥？
-- 5.发布能力是用的selenium，利用cookie登陆xhs或者dy，所以上传版本里没使用，
+- 5.发布能力是用的selenium，利用cookie登陆xhs或者dy，所以上传版本里没使用
+- 6.特别提示：读书摘录的图片生成能力用到了css+pdf+selenium截图，不能用headless，所以linux上还需要完善，目前只能在win上用；linux上可以用PIL的函数，如果有更好的方法请指教
 
 # 改进计划
 - 1.有时间的话，我会尽量把Readme写详细 
