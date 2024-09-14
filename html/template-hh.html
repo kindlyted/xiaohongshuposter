@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图片展示</title>
+
+<style>
+  @font-face {
+            font-family: 'xyjxs';
+            src: url('../fonts/xyjxs.ttf') format('truetype');
+  }
+  @font-face {
+            font-family: 'ceym';
+            src: url('../fonts/ceym.ttf') format('truetype');
+  }
+  @font-face {
+            font-family: 'mono';
+            src: url('../fonts/Monoton-Regular-2.ttf') format('truetype');
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 1200px;
+    height: 1600px;
+    background-image: url('../images/bg-hh.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .pic_title, .pic_subtitle, .pic_body {
+    color: white;
+    text-align: center;
+  }
+  .pic_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .pic_subtitle {
+    font-size: 80px;
+    width: 1200px;
+    color: black;
+    text-align: center;
+    font-family: 'ceym', sans-serif;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 330px;
+  }
+  .pic_body {
+      font-size: 70px;
+      width: 900px;
+      height: 950px;
+      color: black;
+      text-align: justify;
+      font-family: 'xyjxs', sans-serif;
+      position: absolute;
+      top: 450px;
+      overflow: hidden;
+      font-weight: bold;
+  }
+  .date_day {
+    font-size: 120px;
+    margin-bottom: 2px;
+    width: 200px;
+    height: 300px;
+    color: rgba(0, 0, 128, 255);
+    text-align: justify;
+    font-family: 'mono', sans-serif;
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    overflow: hidden;
+  }
+  .date_month {
+    font-size: 120px;
+    margin-bottom: 2px;
+    width: 200px;
+    height: 300px;
+    color: rgba(0, 128, 0, 255);
+    text-align: justify;
+    font-family: 'mono', sans-serif;
+    position: absolute;
+    top: 120px;
+    left: 200px;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+{% for item in data %}
+<div class="container">
+  <div id="date_day" class="date_day">{{ item.title[-2:] }}</div>
+  <div id="date_month" class="date_month">{{ item.title[5:7] }}</div>
+  <div id="pic_title" class="pic_title">{{ item.title }}</div>
+  <div id="pic_subtitle" class="pic_subtitle">{{ item.subtitles }}</div>
+  <div id="pic_body" class="pic_body">{{ item.bodies.replace('\n', '<br>') }}</div>
+</div>
+{% endfor %}
+</body>
+</html>

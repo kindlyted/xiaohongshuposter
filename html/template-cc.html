@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>body</title>
+<style>
+  @font-face {
+    font-family: 'xyjxs';
+    src: url('../fonts/xyjxs.ttf') format('truetype');
+    font-style: normal;
+  }
+  @font-face {
+            font-family: 'ceym';
+            src: url('../fonts/ceym.ttf') format('truetype');
+  }
+  @font-face {
+            font-family: 'mono';
+            src: url('../fonts/Monoton-Regular-2.ttf') format('truetype');
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 720px;
+    height: 1280px;
+    background-image: url('../images/bg-cc.png');
+    background-size: cover;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .pic_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .pic_subtitle {
+    font-size: 70px;
+    width: 1200px;
+    color: black;
+    text-align: center;
+    font-family: 'ceym', sans-serif;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 190px;
+  }
+  .pic_body {
+    font-size: 60px; /* 设置字号为38 */
+    width: 580px; /* 设置宽度为80% */
+    height: 700px; /* 设置高度为500px */
+    color: black; /* 设置颜色为黑色 */
+    text-align: justify; /* 两端对齐 */
+    font-family: 'xyjxs', sans-serif; /* 设置字体为Noto Sans SC */
+    position: absolute;
+    top: 300px; /* 设置垂直位置为190 */
+  }
+</style>
+</head>
+<body>
+{% for item in data %}
+<div class="container">
+    <div id="pic_title" class="pic_title">{{ item.title }}</div>
+    <div id="pic_subtitle" class="pic_subtitle">{{ item.subtitles }}</div>
+    <div id="pic_body" class="pic_body">{{ item.bodies.replace('\n', '<br>') }}</div>
+</div>
+{% endfor %}
+</body>
+</html>
