@@ -7,6 +7,7 @@ https://ai1.ai4uo.com (auth见代码）
 # 部署
 - 1. pip install -r requirements.txt
   2. 在.env里替换apikey就可以直接运行了，大模型我试了三个，星火最便宜——免费，kimi最通顺
+  3. 依赖chromedriver，安装好以后路径放到env里
 
 # 功能
 - 1.每天发布一条小红书笔记，主题为“历史上的今天”
